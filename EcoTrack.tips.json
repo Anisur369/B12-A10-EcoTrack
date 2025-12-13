@@ -1,0 +1,120 @@
+[{
+  "_id": {
+    "$oid": "6915bed775bcc74f585e7273"
+  },
+  "title": "How to compost at home",
+  "content": "Simple steps for home composting...",
+  "category": "Waste Management",
+  "author": "user@example.com",
+  "authorName": "Green User",
+  "upvotes": 25,
+  "createdAt": "2024-01-20T10:30:00Z"
+},
+{
+  "_id": {
+    "$oid": "6915bed775bcc74f585e7274"
+  },
+  "title": "Benefits of Cycling to Work",
+  "content": "Cycling reduces emissions and improves health...",
+  "category": "Health & Mobility",
+  "author": "eco@example.com",
+  "authorName": "Eco Rider",
+  "upvotes": 40,
+  "createdAt": "2024-02-05T09:15:00Z"
+},
+{
+  "_id": {
+    "$oid": "6915bed775bcc74f585e7275"
+  },
+  "title": "Plastic-Free Kitchen Tips",
+  "content": "Switch to reusable containers and bags...",
+  "category": "Waste Management",
+  "author": "green@example.com",
+  "authorName": "Plastic-Free Advocate",
+  "upvotes": 32,
+  "createdAt": "2024-03-12T14:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "6915bed775bcc74f585e7276"
+  },
+  "title": "Rainwater Harvesting Basics",
+  "content": "Collect and store rainwater for daily use...",
+  "category": "Water Conservation",
+  "author": "water@example.com",
+  "authorName": "Water Saver",
+  "upvotes": 18,
+  "createdAt": "2024-04-22T08:45:00Z"
+},
+{
+  "_id": {
+    "$oid": "6915bed775bcc74f585e7277"
+  },
+  "title": "Energy Saving Hacks",
+  "content": "Turn off unused devices and switch to LED bulbs...",
+  "category": "Energy",
+  "author": "energy@example.com",
+  "authorName": "Power Smart",
+  "upvotes": 55,
+  "createdAt": "2024-05-10T11:20:00Z"
+},
+{
+  "_id": {
+    "$oid": "6915bed775bcc74f585e7278"
+  },
+  "title": "Urban Gardening Guide",
+  "content": "Grow vegetables in small balcony spaces...",
+  "category": "Food & Health",
+  "author": "garden@example.com",
+  "authorName": "Urban Farmer",
+  "upvotes": 27,
+  "createdAt": "2024-06-18T16:10:00Z"
+},
+{
+  "_id": {
+    "$oid": "6915bed775bcc74f585e7279"
+  },
+  "title": "Car-Free Weekend Experience",
+  "content": "Enjoy walking and cycling instead of driving...",
+  "category": "Mobility",
+  "author": "mobility@example.com",
+  "authorName": "Free Rider",
+  "upvotes": 22,
+  "createdAt": "2024-07-03T13:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "6915bed775bcc74f585e727a"
+  },
+  "title": "Zero-Waste Shopping Tips",
+  "content": "Buy in bulk and avoid plastic packaging...",
+  "category": "Waste Management",
+  "author": "zerowaste@example.com",
+  "authorName": "Zero Waste Hero",
+  "upvotes": 36,
+  "createdAt": "2024-08-25T10:00:00Z"
+},
+{
+  "_id": {
+    "$oid": "6915bed775bcc74f585e727b"
+  },
+  "title": "Healthy Plant-Based Recipes",
+  "content": "Easy and nutritious vegan meals...",
+  "category": "Food & Health",
+  "author": "vegan@example.com",
+  "authorName": "Plant Lover",
+  "upvotes": 48,
+  "createdAt": "2024-09-14T12:30:00Z"
+},
+{
+  "_id": {
+    "$oid": "6915bed775bcc74f585e727c"
+  },
+  "title": "Community Recycling Drive",
+  "content": "Join the local recycling campaign...",
+  "category": "Community",
+  "author": "community@example.com",
+  "authorName": "Eco Volunteer",
+  "upvotes": 29,
+  "createdAt": "2024-10-05T09:50:00Z"
+}]

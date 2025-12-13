@@ -1,0 +1,120 @@
+[{
+  "_id": {
+    "$oid": "6915be3275bcc74f585e7266"
+  },
+  "title": "Community Clean-up Day",
+  "description": "Join neighborhood clean-up event",
+  "date": "2024-02-15T09:00:00Z",
+  "location": "Central Park",
+  "organizer": "user@example.com",
+  "maxParticipants": 50,
+  "currentParticipants": 35
+},
+{
+  "_id": {
+    "$oid": "6915be3275bcc74f585e7267"
+  },
+  "title": "Tree Plantation Drive",
+  "description": "Plant trees in the local park",
+  "date": "2024-03-10T10:00:00Z",
+  "location": "Green Valley Park",
+  "organizer": "greenclub@example.com",
+  "maxParticipants": 100,
+  "currentParticipants": 80
+},
+{
+  "_id": {
+    "$oid": "6915be3275bcc74f585e7268"
+  },
+  "title": "Beach Cleaning Campaign",
+  "description": "Help clean the beach area",
+  "date": "2024-04-05T08:30:00Z",
+  "location": "Sunny Beach",
+  "organizer": "eco@example.com",
+  "maxParticipants": 200,
+  "currentParticipants": 150
+},
+{
+  "_id": {
+    "$oid": "6915be3275bcc74f585e7269"
+  },
+  "title": "Plastic-Free Awareness Walk",
+  "description": "Walk to raise awareness against plastic use",
+  "date": "2024-05-20T09:00:00Z",
+  "location": "City Square",
+  "organizer": "awareness@example.com",
+  "maxParticipants": 300,
+  "currentParticipants": 220
+},
+{
+  "_id": {
+    "$oid": "6915be3275bcc74f585e726a"
+  },
+  "title": "River Bank Clean-up",
+  "description": "Join hands to clean the river bank",
+  "date": "2024-06-12T07:00:00Z",
+  "location": "River Side",
+  "organizer": "riverteam@example.com",
+  "maxParticipants": 120,
+  "currentParticipants": 95
+},
+{
+  "_id": {
+    "$oid": "6915be3275bcc74f585e726b"
+  },
+  "title": "Community Recycling Workshop",
+  "description": "Learn and practice recycling methods",
+  "date": "2024-07-18T11:00:00Z",
+  "location": "Community Hall",
+  "organizer": "recycle@example.com",
+  "maxParticipants": 60,
+  "currentParticipants": 45
+},
+{
+  "_id": {
+    "$oid": "6915be3275bcc74f585e726c"
+  },
+  "title": "Park Beautification Day",
+  "description": "Decorate and maintain the local park",
+  "date": "2024-08-25T09:30:00Z",
+  "location": "Rose Garden Park",
+  "organizer": "beautify@example.com",
+  "maxParticipants": 80,
+  "currentParticipants": 60
+},
+{
+  "_id": {
+    "$oid": "6915be3275bcc74f585e726d"
+  },
+  "title": "Neighborhood E-Waste Collection",
+  "description": "Collect and recycle electronic waste",
+  "date": "2024-09-14T10:00:00Z",
+  "location": "Community Center",
+  "organizer": "ewaste@example.com",
+  "maxParticipants": 150,
+  "currentParticipants": 110
+},
+{
+  "_id": {
+    "$oid": "6915be3275bcc74f585e726e"
+  },
+  "title": "School Awareness Program",
+  "description": "Educate students about sustainability",
+  "date": "2024-10-02T09:00:00Z",
+  "location": "Sunrise School",
+  "organizer": "school@example.com",
+  "maxParticipants": 500,
+  "currentParticipants": 400
+},
+{
+  "_id": {
+    "$oid": "6915be3275bcc74f585e726f"
+  },
+  "title": "Local Market Clean-up",
+  "description": "Clean and organize the local market area",
+  "date": "2024-11-08T08:00:00Z",
+  "location": "Downtown Market",
+  "organizer": "market@example.com",
+  "maxParticipants": 70,
+  "currentParticipants": 55
+}]

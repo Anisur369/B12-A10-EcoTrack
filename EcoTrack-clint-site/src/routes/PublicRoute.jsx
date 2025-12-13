@@ -10,8 +10,9 @@ import ChallengesDetails from "../components/challenges/ChallengesDetails.jsx";
 import AddChallenge from "../components/challenges/AddChallengeForm.jsx";
 import ForgotPasswordLink from "../components/auth/ForgotPasswordLink.jsx";
 import JoinChallenge from "../pages/protected/JoinChallenge.jsx";
-import MyActivities from "../pages/protected/MyActivities.jsx";
 import Profile from "../components/common/Profile.jsx";
+import MyActivities from "../pages/protected/MyActivities.jsx";
+import MyActivitiesDetails from "../pages/protected/MyActivitiesDetails.jsx";
 
 const PublicRoute = createBrowserRouter([
   {
@@ -22,14 +23,13 @@ const PublicRoute = createBrowserRouter([
       {
         path: "/challenges",
         element: (
-          <PrivateRoute>
             <Challenges />
-          </PrivateRoute>
         ),
+        loader: () => fetch("http://localhost:3000/challenges"),
       },
       {
         path: "/challenges/:id",
-        element: <ChallengesDetails />,
+        element: <PrivateRoute><ChallengesDetails /></PrivateRoute>,
         loader: ({ params }) =>
           fetch(`http://localhost:3000/challenges/${params.id}`),
       },
@@ -43,7 +43,7 @@ const PublicRoute = createBrowserRouter([
       },
       {
         path: "/challenges/join/:id",
-        element: <JoinChallenge />,
+        element: <PrivateRoute><JoinChallenge /></PrivateRoute>,
         loader: ({ params }) =>
           fetch(`http://localhost:3000/challenges/${params.id}`),
       },
@@ -54,19 +54,28 @@ const PublicRoute = createBrowserRouter([
             <MyActivities />
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:3000/activities"),
+        loader: () => fetch("http://localhost:3000/userChallenges"),
       },
       {
         path: "/my-activities/:id",
         element: (
           <PrivateRoute>
-            <div> My Activities Details </div>
+            <MyActivitiesDetails />
           </PrivateRoute>
         ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:3000/userChallenges/${params.id}`),
       },
       { path: "/login", element: <Login /> },
       { path: "/register", element: <Register /> },
-      { path: "/profile", element: <Profile /> },
+      {
+        path: "/profile",
+        element: (
+          <PrivateRoute>
+            <Profile />
+          </PrivateRoute>
+        ),
+      },
       { path: "/forgot-password", element: <ForgotPasswordLink /> },
       {
         path: "*",

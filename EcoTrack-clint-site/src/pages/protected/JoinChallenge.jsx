@@ -1,52 +1,56 @@
 // src/pages/JoinChallenge.jsx
 import { useState } from "react";
-import { Link, useParams, useLoaderData } from "react-router-dom";
+import { Link, useParams, useLoaderData, Navigate } from "react-router-dom";
 import {
-  Leaf,
   Calendar,
   Users,
   Target,
   Clock,
   CheckCircle,
 } from "lucide-react";
-import { toast } from "react-hot-toast";
+// import { toast } from "react-hot-toast"
+import { ToastContainer, toast } from "react-toastify";
 
 export default function JoinChallenge() {
   const { id } = useParams();
   const [isJoining, setIsJoining] = useState(false);
   const challenge = useLoaderData();
+  console.log("Loaded challenge:", challenge);
+  const [joined, setJoined] = useState({    
+userId:"user02@example.com",
+challengeId:`ObjectId('${challenge._id}')`,
+status:"Ongoing",
+progress:0,
+joinDate:"ISODate('2025-11-10T09:30:00Z')"
+  });
 
-  // Mock challenge data (এটা তোমার API থেকে আসবে)
-  // const challenge = {
-  //   title: "Plastic-Free July",
-  //   category: "Waste Reduction",
-  //   description:
-  //     "Commit to avoiding single-use plastics for the entire month of July. Reduce waste, protect oceans, and build sustainable habits!",
-  //   duration: "30 days",
-  //   startDate: "July 1, 2025",
-  //   endDate: "July 31, 2025",
-  //   participants: 2847,
-  //   impactMetric: "kg plastic avoided",
-  //   target: "50,000 kg community-wide",
-  //   currentProgress: 68,
-  //   imageUrl: "/api/placeholder/800/400",
-  // };
 
   const handleJoin = async () => {
     setIsJoining(true);
     // TODO: Call your API POST /api/challenges/join/:id
     setTimeout(() => {
       setIsJoining(false);
-      alert("Successfully joined the challenge! 🌱");
+      // alert("Successfully joined the challenge! 🌱");
+      const response = fetch("http://localhost:3000/userChallenges", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(joined),
+      });
+
       // toast.success("Successfully joined the challenge! 🌱");
-      toast.success("Successfully joined the challenge! 🌱");
-      navigator.vibrate(100);
+      // navigate("/my-activities");
+      toast.success("Successfully joined the challenge!");
+      // Navigate("/my-activities");
+
       // Redirect to my-activities or show success state
     }, 1500);
   };
 
   return (
     <>
+    <ToastContainer />
       {/* Main Content */}
       <main className="min-h-screen bg-gray-50 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -65,9 +69,14 @@ export default function JoinChallenge() {
             <div className="lg:col-span-2 space-y-8">
               {/* Challenge Card */}
               <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-                <div className="bg-gradient-to-r from-emerald-500 to-teal-600 h-64 flex items-center justify-center">
-                  <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-8">
-                    <Leaf className="h-24 w-24 text-white" />
+                <div className="bg-gradient-to-r from-emerald-500 to-teal-600">
+                  <div className="relative">
+                    {/* <Leaf className="h-24 w-24 text-white" /> */}
+                    <img
+                      src={challenge.imageUrl}
+                      alt={challenge.title}
+                      className="w-full h-88"
+                    />
                   </div>
                 </div>
 
@@ -99,7 +108,7 @@ export default function JoinChallenge() {
                       <Users className="h-8 w-8 text-emerald-600 mx-auto mb-2" />
                       <p className="text-sm text-gray-600">Participants</p>
                       <p className="font-bold text-gray-900">
-                        {challenge.participants.toLocaleString()}
+                        {challenge.participants}
                       </p>
                     </div>
                     <div className="text-center">
@@ -156,7 +165,7 @@ export default function JoinChallenge() {
                     <div className="flex justify-between text-sm mb-2">
                       <span className="text-gray-600">Overall Progress</span>
                       <span className="font-bold">
-                        {challenge.currentProgress}%
+                        {challenge.participants}%
                       </span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-10 overflow-hidden">
@@ -164,13 +173,13 @@ export default function JoinChallenge() {
                         className="h-full bg-gradient-to-r from-emerald-500 to-teal-500 flex items-center justify-end pr-4 text-white font-bold transition-all duration-1000"
                         style={{ width: `${challenge.currentProgress}%` }}
                       >
-                        {challenge.currentProgress}%
+                        {challenge.currentProgress}
                       </div>
                     </div>
                   </div>
                   <div className="text-center pt-4">
                     <p className="text-3xl font-bold text-emerald-600">
-                      34,218 kg
+                      34,218
                     </p>
                     <p className="text-gray-600">plastic avoided so far</p>
                   </div>
